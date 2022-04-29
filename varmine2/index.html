@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="styles.css">
+
+<title>Varmine</title>
+</head>
+<body>
+    <div class="appbar">
+      <span class="fa fa-bars" id="menu" onclick="openNav()"></span>
+      <h1 id="heading">VARMINE</h1>
+      <a href="contactform.html" style="float: right;padding-right: 10%;"><b>Contact</b></a>
+    </div>
+    
+    <div class="first">
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="main.png" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="building permit.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="slide2.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<br><br><br><br>
+<div class="w3-row-padding">
+  <div class="w3-container w3-third">
+    <img src="1.jpeg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <br><br>
+    <center>
+      <p> 3 BHK GROUND FLOOR PLAN </p>
+    </center>
+  </div>
+
+  <div class="w3-container w3-third">
+    <img src="6.jpeg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <br><br>
+    <center>
+      <p> 2 BHK GROUND FLOOR PLAN</p>
+    </center>
+  </div>
+
+  <div class="w3-container w3-third">
+    <img src="7.jpeg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <br><br>
+    <center>
+      <p> 1 AND 2 BHK FLOOR PLANS </p>
+    </center>
+  </div>
+
+  <div class="w3-container w3-third">
+    <img src="4.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <br><br>
+    <center>
+      <p> 3BHK HOUSE PLAN 
+        AREA:1965 Sqft
+      </p>
+    </center>
+  </div>
+
+
+  <div class="w3-container w3-third">
+    <img src="5.jpeg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <br><br>
+    <center>
+      <p> 3BHK GROUND FLOOR AND FIRST FLOOR PLAN</p>
+    </center>
+  </div>
+
+  <div class="w3-container w3-third">
+    <img src="3.jpg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <br><br>
+    <center>
+      <p> AREA : 2190Sqft
+        5 ROOMS Plan
+      </p>
+    </center>
+  </div>
+
+  <div class="w3-container w3-third">
+    <img src="2.jpeg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <br><br>
+    <center>
+      <p> SINGLE BEDROOM GROUND FLOOR AND FIRST FLOOR PLAN </p>
+    </center>
+  </div>
+  
+
+
+  <div class="w3-container w3-third">
+    <img src="8.jpeg" style="width:100%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+    <br><br>
+    <center>
+      <p> 1 BHK house Plan</p>
+    </center>
+  </div>
+
+  
+  
+</div>
+
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:100%">
+  </div>
+</div>
+
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+ 
+
+<div class="overlay">
+      
+  <div id="navigation">
+    <span class="fa fa-close" id="close" onclick="closeNav()"></span>
+    <a href="home.html" class="main"><b>HOME</b></a>
+    <a href="plans.html" class="main"><b>PLANS</b></a>
+    <a href="#" class="main"><b>ELEVATIONS</b></a>
+    <a href="#" class="main" style="display:inline;" onclick="openSubLinks()"><b>CONSTRUCTION DRAWNGS</b>
+    <span class="fa fa-caret-down" id="down"></span>
+    </a>
+    <div id="sublinks">
+      <a href="#"><b>Electrical Drawings</b></a>
+      <a href="#"><b>Plumbing Drawings</b></a>
+      <a href="#"><b>Working Drawings</b></a>
+      <a href="#"><b>Structural Drawings</b></a>
+    </div>
+    <div id="login">
+      <h2 href="#" id="log"><b>Login
+      </b></h2><br>
+      <a href="#"><b>Customer login  <span class="fa fa-sign-in"></span></b></a>
+      <a href="#"><b>Member login  <span class="fa fa-sign-in"></span></b></a>
+    </div>
+  </div>
+
+  </div>
+   
+</body>
+<script>
+var nav = document.getElementById("navigation");
+var menu = document.getElementById("menu");
+var opened=0;
+ function openNav(){
+    nav.style.left = "0";
+    nav.style.boxShadow = "0 0 0 10000px rgba(0,0,0,.7)";
+    document.body.style.overflowY ="hidden";
+    opened = 1;
+  }
+  function closeNav(){
+    nav.style.left = "-100%";
+    nav.style.boxShadow = "none";    
+    document.body.style.overflowY ="scroll";
+    opened = 0;
+  }
+  function openSubLinks(){
+    var sub = document.getElementById("sublinks");
+    sub.classList.toggle("subdisplay");
+  }
+//  window.onclick = function(e){
+//    if(e.target!= nav )
+//    closeNav();
+//  }
+</script>
+</html>
